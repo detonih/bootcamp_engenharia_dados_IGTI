@@ -71,11 +71,11 @@ import tweepy
 # Observação, as credenciais abaixo são falsas.
 # Para este notebook funcionar você precisa criar suas próprias credenciais e informá-las nas respectivas variáveis abaixo:
 
-API_Key = "RgoeD4hnRASDY2fOJHJYjTToopk"
-API_secret_key = "AS7uFwE2utdDESopYjdnnG7xDaRZgDLF8s6oMOTCXSrvvd1Atp"
+API_Key = ""
+API_secret_key = ""
 
-access_token = "15975346852145698745-6mWDFGHldyXasdfDSo0fCcUaHaDSee"
-access_token_secret = "Ukazg00W9W5idDFRd5aFGH81pvUcAs8Wasweudfradf5fd"
+access_token = ""
+access_token_secret = ""
 
 
 # Fazer a autenticação na API usando suas credenciais
