@@ -1,12 +1,13 @@
 import json
 from tweepy import OAuthHandler, Stream, StreamListener
 from datetime import datetime
+import os
 
 # Cadastrar as chaves de acesso
-consumer_key = "Uu2CJwUA0FwqavsNxMcZ9Pf0D"
-consumer_secret = "5kGsLxfDL5YhIx6qAjsVuSeuEoE8gvv57MPp7aTFhum9m5Br6x"
-access_token = "1171765170399514624-3op7Za6QFkUcfNiyoGnYLks5qeejpa"
-access_token_secret = "bX2J9cLbcvRbDanInG4VOWzpZpr5jQ8piz84CeDzr0XSt"
+consumer_key = os.getenv('consumer_key')
+consumer_secret = os.getenv('consumer_secret')
+access_token = os.getenv('access_token')
+access_token_secret = os.getenv('access_token_secret')
 
 todays_date = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
 
