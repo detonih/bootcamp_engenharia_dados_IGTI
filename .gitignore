@@ -7,3 +7,8 @@
 *enem2019/
 *.txt
 *.json
+*.env
+*.log
+*__pycache__/
+*logs/
+*plugins/
