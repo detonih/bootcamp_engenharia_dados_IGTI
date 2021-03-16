@@ -26,12 +26,12 @@ dag = DAG(
 
 get_data = BashOperator(
   task_id='get-data',
-  bash_command='curl https://raw.githubusercontent.com/A3Data/hermione/master/hermione/file_text/train.csv -o ~/csv/',
+  bash_command='curl https://raw.githubusercontent.com/A3Data/hermione/master/hermione/file_text/train.csv -o /opt/airflow/csv/train.csv',
   dag=dag
 )
 
 def calculate_mean_age():
-  df = pd.read_csv('~/csv/train.csv')
+  df = pd.read_csv('/opt/airflow/csv/train.csv')
   med = df.Age.mean()
   return med
 
@@ -48,6 +48,7 @@ task_idade_media = PythonOperator(
 task_print_idade = PythonOperator(
   task_id='mostra-idade',
   python_callable=print_age,
+  provide_context=True,
   dag=dag
 )
 
